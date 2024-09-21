@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.ConsoleApp", "IndustrialEquipmentModel.ConsoleApp\IndustrialEquipmentModel.ConsoleApp.csproj", "{C7875AB2-D4A5-4357-80FC-7DCC51EF4328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.Domain", "IndustrialEquipmentModel.Domain\IndustrialEquipmentModel.Domain.csproj", "{CC0325AF-C0BA-4FE8-BF42-DC9574D74F60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7875AB2-D4A5-4357-80FC-7DCC51EF4328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7875AB2-D4A5-4357-80FC-7DCC51EF4328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7875AB2-D4A5-4357-80FC-7DCC51EF4328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7875AB2-D4A5-4357-80FC-7DCC51EF4328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC0325AF-C0BA-4FE8-BF42-DC9574D74F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0325AF-C0BA-4FE8-BF42-DC9574D74F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0325AF-C0BA-4FE8-BF42-DC9574D74F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0325AF-C0BA-4FE8-BF42-DC9574D74F60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52191EC8-F410-4F30-9D9F-EA6902529DD5}
+	EndGlobalSection
+EndGlobal
