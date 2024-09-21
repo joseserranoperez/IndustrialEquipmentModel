@@ -26,10 +26,12 @@ namespace IndustrialEquipmentModel.Domain.Entities
         /// </summary>
         public bool IsExternal { get; set; }
 
+        //Relación del módulo con su unidad.
         public Unit Unit { get; set; }
 
         public Guid? UnitId { get; set; } 
 
+        //Relación módulo-sensores/actuadores.
         public List<Equipment> Equiments { get; set; } 
   
         #endregion

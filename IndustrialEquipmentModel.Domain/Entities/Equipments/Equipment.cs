@@ -19,6 +19,7 @@ namespace IndustrialEquipmentModel.Domain.Entities.Equipments
         /// </summary>
         string WorkingPrinciple { get; set; }
 
+        //Relación del sensor/actuador con su módulo.
         public Module Module{ get; set; }
 
         public Guid? ModuleId { get; set; }

@@ -36,6 +36,9 @@ namespace IndustrialEquipmentModel.Domain.Entities
         /// </summary>
         DateTime StartUp { get; set; }
 
+        /// <summary>
+        /// Relación unidad-módulos.
+        /// </summary>
         public List<Module> Modules { get; set; }
         #endregion
 
