@@ -42,7 +42,7 @@ internal class Program
 
 
             //Añadiendo unidad, módulo, sensor y actuador a BD
-            context.Set<Unit>().Add(unit1);
+            //applicationcontext.Set<Unit>().Add(unit1);
 
 
 

@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IndustrialEquipmentModel.Contracts\IndustrialEquipmentModel.Contracts.csproj" />
     <ProjectReference Include="..\IndustrialEquipmentModel.Domain\IndustrialEquipmentModel.Domain.csproj" />
   </ItemGroup>
 

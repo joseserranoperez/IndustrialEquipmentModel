@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialEquipmentModel.Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialEquipmentModel.DataAccess", "IndustrialEquipmentModel.DataAccess\IndustrialEquipmentModel.DataAccess.csproj", "{3CDE43E8-C53F-4C62-BEF0-E2CD2F79D333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.Contracts", "IndustrialEquipmentModel.Contracts\IndustrialEquipmentModel.Contracts.csproj", "{18DB962D-D9AF-4B77-BC13-397B802B7F65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialEquipmentModel.Contracts", "IndustrialEquipmentModel.Contracts\IndustrialEquipmentModel.Contracts.csproj", "{18DB962D-D9AF-4B77-BC13-397B802B7F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.DataAccess.Tests", "IndustrialEquipmentModel.DataAccess.Tests\IndustrialEquipmentModel.DataAccess.Tests.csproj", "{AD79D5D7-1334-4A1F-AD0F-6AEA6CE47F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcService1", "GrpcService1\GrpcService1.csproj", "{4DAEB435-375A-481D-8D12-D407A84619F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.DataAccess.GrpcProtos", "IndustrialEquipmentModel.DataAccess.GrpcProtos\IndustrialEquipmentModel.DataAccess.GrpcProtos.csproj", "{DDEF138D-C4A7-4BD5-B6AD-300F1BFB30CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialEquipmentModel.Application", "IndustrialEquipmentModel.Application\IndustrialEquipmentModel.Application.csproj", "{7727A12E-1BB0-45E4-8E15-A74D86E7A05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{18DB962D-D9AF-4B77-BC13-397B802B7F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18DB962D-D9AF-4B77-BC13-397B802B7F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18DB962D-D9AF-4B77-BC13-397B802B7F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD79D5D7-1334-4A1F-AD0F-6AEA6CE47F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD79D5D7-1334-4A1F-AD0F-6AEA6CE47F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD79D5D7-1334-4A1F-AD0F-6AEA6CE47F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD79D5D7-1334-4A1F-AD0F-6AEA6CE47F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAEB435-375A-481D-8D12-D407A84619F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAEB435-375A-481D-8D12-D407A84619F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAEB435-375A-481D-8D12-D407A84619F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAEB435-375A-481D-8D12-D407A84619F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDEF138D-C4A7-4BD5-B6AD-300F1BFB30CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDEF138D-C4A7-4BD5-B6AD-300F1BFB30CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDEF138D-C4A7-4BD5-B6AD-300F1BFB30CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDEF138D-C4A7-4BD5-B6AD-300F1BFB30CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7727A12E-1BB0-45E4-8E15-A74D86E7A05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7727A12E-1BB0-45E4-8E15-A74D86E7A05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7727A12E-1BB0-45E4-8E15-A74D86E7A05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7727A12E-1BB0-45E4-8E15-A74D86E7A05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
