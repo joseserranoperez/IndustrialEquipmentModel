@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IndustrialEquipmentModel.DataAccess\IndustrialEquipmentModel.DataAccess.csproj" />
+    <ProjectReference Include="..\IndustrialEquipmentModel.Domain\IndustrialEquipmentModel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

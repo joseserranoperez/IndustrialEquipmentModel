@@ -49,10 +49,13 @@ namespace IndustrialEquipmentModel.Domain.Entities
         /// </summary>
         /// <param name="id">Identificador de la entidad.</param>
         /// <param name="name">Nombre del módulo.</param>
-        public Module(Guid id, string name) : base(id)
+        /// <param name="unit">Unidad a la que pertenece.</param>
+        public Module(Guid id, string name, Unit unit) : base(id)
         {
             Name = name;
             IsExternal = false;
+            Unit = unit;
+            UnitId = unit.Id;
         }
     }
 }

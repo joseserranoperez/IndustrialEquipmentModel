@@ -34,7 +34,7 @@ namespace IndustrialEquipmentModel.Domain.Entities
         /// <summary>
         /// Fecha de puesta en marcha de la unidad.
         /// </summary>
-        DateTime StartUp { get; set; }
+        public DateTime StartUp { get; set; }
 
         /// <summary>
         /// Relación unidad-módulos.

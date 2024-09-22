@@ -56,9 +56,10 @@ namespace IndustrialEquipmentModel.Domain.Entities.Equipments
         /// </summary>
         /// <param name="id">Identificador de la entidad.</param>
         /// <param name="workingPrinciple">Principio de funcionamiento del sensor.</param>
+        /// <param name="module">Módulo al cual pertenece el actuador.</param>
         /// <param name="lastCalibration">Fecha de la última calibración del sensor.</param>
         /// <param name="variable">Variable que mide el sensor.</param>
-        public Sensor(Guid id, string workingPrinciple, DateTime lastCalibration, Variable variable) : base (id, workingPrinciple)
+        public Sensor(Guid id, string workingPrinciple, Module module, DateTime lastCalibration, Variable variable) : base (id, workingPrinciple, module)
         {
             LastCalibration = lastCalibration;
             Variable = variable;

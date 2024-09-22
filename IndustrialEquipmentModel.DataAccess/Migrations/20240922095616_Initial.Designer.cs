@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IndustrialEquipmentModel.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240921160011_Initial")]
+    [Migration("20240922095616_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,6 +29,10 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("WorkingPrinciple")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ModuleId");
@@ -40,9 +44,6 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("ActuatorId")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsExternal")
@@ -57,8 +58,6 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ActuatorId");
 
                     b.HasIndex("UnitId");
 
@@ -81,6 +80,9 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartUp")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -132,10 +134,6 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
 
             modelBuilder.Entity("IndustrialEquipmentModel.Domain.Entities.Module", b =>
                 {
-                    b.HasOne("IndustrialEquipmentModel.Domain.Entities.Equipments.Actuator", null)
-                        .WithMany("Modules")
-                        .HasForeignKey("ActuatorId");
-
                     b.HasOne("IndustrialEquipmentModel.Domain.Entities.Unit", "Unit")
                         .WithMany("Modules")
                         .HasForeignKey("UnitId")
@@ -169,11 +167,6 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                 });
 
             modelBuilder.Entity("IndustrialEquipmentModel.Domain.Entities.Unit", b =>
-                {
-                    b.Navigation("Modules");
-                });
-
-            modelBuilder.Entity("IndustrialEquipmentModel.Domain.Entities.Equipments.Actuator", b =>
                 {
                     b.Navigation("Modules");
                 });

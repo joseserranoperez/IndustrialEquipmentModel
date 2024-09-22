@@ -16,24 +16,12 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Code = table.Column<string>(type: "TEXT", nullable: false),
-                    Brand = table.Column<string>(type: "TEXT", nullable: false)
+                    Brand = table.Column<string>(type: "TEXT", nullable: false),
+                    StartUp = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Unities", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Actuators",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Brand = table.Column<string>(type: "TEXT", nullable: false),
-                    LastMaintenance = table.Column<DateTime>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Actuators", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,17 +31,11 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     IsExternal = table.Column<bool>(type: "INTEGER", nullable: false),
-                    UnitId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ActuatorId = table.Column<Guid>(type: "TEXT", nullable: true)
+                    UnitId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Modules", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Modules_Actuators_ActuatorId",
-                        column: x => x.ActuatorId,
-                        principalTable: "Actuators",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Modules_Unities_UnitId",
                         column: x => x.UnitId,
@@ -67,6 +49,7 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    WorkingPrinciple = table.Column<string>(type: "TEXT", nullable: false),
                     ModuleId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -76,6 +59,25 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                         name: "FK_Equipment_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Actuators",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Brand = table.Column<string>(type: "TEXT", nullable: false),
+                    LastMaintenance = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Actuators", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Actuators_Equipment_Id",
+                        column: x => x.Id,
+                        principalTable: "Equipment",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -106,29 +108,15 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Modules_ActuatorId",
-                table: "Modules",
-                column: "ActuatorId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Modules_UnitId",
                 table: "Modules",
                 column: "UnitId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Actuators_Equipment_Id",
-                table: "Actuators",
-                column: "Id",
-                principalTable: "Equipment",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Actuators_Equipment_Id",
-                table: "Actuators");
+            migrationBuilder.DropTable(
+                name: "Actuators");
 
             migrationBuilder.DropTable(
                 name: "Sensors");
@@ -138,9 +126,6 @@ namespace IndustrialEquipmentModel.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "Modules");
-
-            migrationBuilder.DropTable(
-                name: "Actuators");
 
             migrationBuilder.DropTable(
                 name: "Unities");

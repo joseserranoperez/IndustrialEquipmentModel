@@ -21,8 +21,6 @@ namespace IndustrialEquipmentModel.Domain.Entities.Equipments
         /// Fecha del último mantenimiento del actuador.
         /// </summary>
         public DateTime LastMaintenance { get; set; }
-
-        public List<Module> Modules { get; set; }
         #endregion
 
 
@@ -38,8 +36,9 @@ namespace IndustrialEquipmentModel.Domain.Entities.Equipments
         /// </summary>
         /// <param name="id">Identificador de la entidad.</param>
         /// <param name="workingPrinciple">Principio de funcionamiento del actuador.</param>
+        /// <param name="module">Módulo al cual pertenece el actuador.</param>
         /// <param name="lastMaintenance">Fecha del último mantenimiento del actuador.</param>
-        public Actuator(Guid id, string workingPrinciple, DateTime lastMaintenance) : base (id, workingPrinciple)
+        public Actuator(Guid id, string workingPrinciple, Module module, DateTime lastMaintenance) : base (id, workingPrinciple, module)
         {
             LastMaintenance = lastMaintenance;
             Brand = string.Empty;
